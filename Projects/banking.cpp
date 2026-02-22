@@ -53,8 +53,33 @@ void bankAcc :: display(){
 
 int main(){
     bankAcc b ("kshitij",123456,10000);
-   // b.bal = 10000;
-    b.deposit(2000);
-    b.withdrawal(1000);
-    b.display();
-};
+    int choice,amt;
+   // b.bal = 10000; --> not work
+     cout << "\n----- BANK MENU -----\n";
+        cout << "1. Deposit\n";
+        cout << "2. Withdraw\n";
+        cout << "3. Show details\n";
+        cout << "Enter choice: ";
+        cin >> choice;
+        switch (choice)
+        {
+        case 1:
+            cout<<"Enter amount to deposit"<<endl;
+            cin>>amt;
+            b.deposit(amt);
+            break;
+         case 2:
+            cout<<"Enter amount to withdrwal"<<endl;
+            cin>>amt;
+           b.withdrawal(amt);
+            break;
+         case 3: 
+            cout<<"Details"<<endl;
+            b.display();
+            break;
+
+        default: cout << "Invalid Choice" <<endl;
+            break;
+        
+}
+}
