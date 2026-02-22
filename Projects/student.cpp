@@ -1,5 +1,5 @@
 //WAP to degin and develop a student info system, where student detail given by user/constructor i.e. id,name,marks of subjects. calculate total marks, percentage and grade. 
-/*
+
 #include <iostream>
 using namespace std;
 class student
@@ -15,7 +15,7 @@ class student
     void cal();
     void print(){
         cout<<"Id"<<"\t Name "<<"\tTotal Marks"<<"\tPercentage"<<"\tGrade"<<endl;
-        cout<<id<<"\t"<<name<<"\t"<<tm<<"\t"<<p<<"\t"<<g;
+        cout<<id<<"\t"<<name<<"\t"<<tm<<"\t\t"<<p<<"\t\t"<<g<<endl;
     };
 };
     void student :: input(){
@@ -61,4 +61,4 @@ int main(){
     s.cal();
     s.print();
     return 0;
-}*/
+}
