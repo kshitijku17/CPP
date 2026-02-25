@@ -39,12 +39,12 @@ void bankAcc :: deposit(double amt){
     }
 };
 void bankAcc :: withdrawal (double amt){
-    if(isvalidAmount(amt) && bal>amt){
+    if(isvalidAmount(amt) && bal>=amt){
         bal-= amt;
         cout<<"Withdrawal: "<<amt<<"\ncurrent Balance: "<<bal<<endl;
     }
     else{
-        cout<<"Invalid Amount\n"<<endl;
+        cout<<"Invalid Amount"<<endl;
     }
 };
 void bankAcc :: display(){
@@ -53,7 +53,8 @@ void bankAcc :: display(){
 
 int main(){
     bankAcc b ("kshitij",123456,10000);
-    int choice,amt;
+    int choice;
+    double amt;
    // b.bal = 10000; --> not work
      cout << "\n----- BANK MENU -----\n";
         cout << "1. Deposit\n";
