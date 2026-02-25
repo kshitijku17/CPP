@@ -30,7 +30,7 @@ class student
             cin>>marks[i];
         }
     }
-    void student ::cal(){
+    void student :: cal(){
         for(int i=0;i<n;i++){
             tm+=marks[i];
         }
@@ -38,15 +38,17 @@ class student
         if(p>=90){
             g='O';
         }
-        else if (p<80 && p>=70){
+        else if (p<90 && p>=80){
             g = 'A';
         }
-        else if(p<70 && p>=60){
+        else if (p<80 && p>=70){
             g = 'B';
         }
-       
-        else if (p<60 && p>=50){
+        else if(p<70 && p>=60){
             g = 'C';
+        }
+        else if (p<60 && p>=50){
+            g = 'D';
         }
         else if (p<50  && p>=40){
              g = 'P';
