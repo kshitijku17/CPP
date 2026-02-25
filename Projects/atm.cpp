@@ -1,4 +1,4 @@
-// Data -- account number, pin, balance, is Authentiation
+// Data -- account number, pin, balance
 // Method -- deposite, withdrwal, check balance, logout, ministatemnet, pin change 
 #include <iostream>
 using namespace std;
@@ -39,7 +39,7 @@ void ATM :: depo(double amt){
     }
 };
 void ATM :: with(double amt){
-    if(isvalidAmount(amt) && bal>amt){
+    if(isvalidAmount(amt) && bal>=amt){
         bal-= amt;
         cout<<"Withdrawal: "<<amt<<endl;
     }
@@ -51,7 +51,7 @@ void ATM :: check(){
     cout<<"Current balance: "<<bal<<endl;
 };
 void ATM::change(int Opin, int Npin){
-    if(Opin == pin){
+    if(Opin == pin && isvalidPin(Npin)){
         pin = Npin;
         cout<<"PIN changed successfully"<<endl;
     }
@@ -64,10 +64,11 @@ void ATM :: mini(){
 };
 int main(){
     ATM u ("Kshitij",123456,10000,1234);
-    int Opin,Npin,amt,choice;
+    int Opin,Npin,choice;
+    double amt;
     cout << "\n----- ATM MENU -----\n";
         cout << "1. Deposit\n";
-        cout << "2. Withdraw\n";
+        cout << "2. Withdrawal\n";
         cout << "3. Check Balance\n";
         cout << "4. Change PIN\n";
         cout << "Enter choice: ";
