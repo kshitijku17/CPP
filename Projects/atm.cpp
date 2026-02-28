@@ -80,12 +80,14 @@ int main(){
             cout<<"Enter amount to deposit"<<endl;
             cin>>amt;
             u.depo(amt);
+            u.mini();
             break;
         
         case 2:
             cout<<"Enter amount to withdrwal"<<endl;
             cin>>amt;
            u.with(amt);
+           u.mini();
             break;
         
         case 3:
@@ -104,5 +106,4 @@ int main(){
         default: cout << "Invalid Choice" <<endl;
             break;
         }
-        u.mini();
 }
