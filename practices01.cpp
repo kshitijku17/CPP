@@ -3,6 +3,17 @@ using namespace std;
 int main(){
     return 0;
 }*/
+// WAP to find a character is alphanumeric or not
+/* 
+char ch;
+    cout<<"Enter a character "<<endl;
+    cin>>ch;
+    if((ch>='a'&&ch<='z')||(ch>='A'&&ch<='Z')||(ch>='0'&&ch<='a')){
+        cout<<ch<<" is alphanumeric character"<<endl;
+    }
+    else{
+        cout<<ch<<" is not alphanumeric character (it's a symbol)"<<endl;
+    }*/
 // WAP to print the list of colors 
 /*
  const char* colors[]={"Red","Green","Blue","Yellow","Pinks"};
